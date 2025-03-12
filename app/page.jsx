@@ -4,7 +4,7 @@ import SearchForm from "@/components/SearchForm";
 import CompaniesList from "@/components/CompaniesList";
 
 export default function HomePage() {
-  const [companies, setCompanies] = useState([]);
+  const [firma, setFirma] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = async (searchParams) => {
@@ -17,14 +17,14 @@ export default function HomePage() {
 
     const response = await fetch(url);
     const data = await response.json();
-    setCompanies(data._embedded?.enheter || []);
+    setFirma(data._embedded?.enheter || []);
   };
 
   return (
     <div className="p-6 min-h-screen bg-black text-white">
       <SearchForm onSearch={handleSearch} />
       <CompaniesList
-        companies={companies.filter((c) =>
+        companies={firma.filter((c) =>
           c.navn.toLowerCase().includes(searchQuery.toLowerCase())
         )}
       />
