@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SearchForm from "@/components/SearchForm";
-import CompaniesList from "@/components/CompaniesList";
+import FirmaListe from "@/components/FirmaListe";
 
 export default function HomePage() {
   const [firma, setFirma] = useState([]);
@@ -23,7 +23,7 @@ export default function HomePage() {
   return (
     <div className="p-6 min-h-screen bg-black text-white">
       <SearchForm onSearch={handleSearch} />
-      <CompaniesList
+      <FirmaListe
         companies={firma.filter((c) =>
           c.navn.toLowerCase().includes(searchQuery.toLowerCase())
         )}

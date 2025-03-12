@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import FirmaKort from "./FirmaKort";
 
-export default function CompaniesList() {
+export default function FirmaListe() {
   const [companies, setCompanies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
