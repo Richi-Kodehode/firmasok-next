@@ -35,14 +35,14 @@ export default function FirmaListe() {
   }, [searchTerm]);
 
   return (
-    <div className="min-h-screen bg-gray-800 text-white p-6">
+    <div className="min-h-screen bg-black text-white p-6">
       {loading && (
         <p className="text-white text-center text-lg mt-6">
           Laster inn selskaper...
         </p>
       )}
       {error && (
-        <p className="text-red-500 text-center text-lg mt-6">Error: {error}</p>
+        <p className="text-white text-center text-lg mt-6">Error: {error}</p>
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
