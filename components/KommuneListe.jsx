@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export const KommuneList = () => {
+export const KommuneListe = () => {
   const [kommuner, setKommuner] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

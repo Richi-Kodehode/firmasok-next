@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import CompanyModal from "@/components/CompanyModal";
+import FirmaKort from "./FirmaKort";
 
 export default function SearchForm() {
   const [kommune, setKommune] = useState([]);
@@ -134,7 +134,7 @@ export default function SearchForm() {
       </div>
 
       {velgFirma && (
-        <CompanyModal company={velgFirma} onClose={() => setValgtFirma(null)} />
+        <FirmaKort company={velgFirma} onClose={() => setValgtFirma(null)} />
       )}
     </div>
   );

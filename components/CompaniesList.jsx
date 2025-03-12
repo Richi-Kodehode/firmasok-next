@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import CompanyModal from "./CompanyModal";
+import FirmaKort from "./FirmaKort";
 
 export default function CompaniesList() {
   const [companies, setCompanies] = useState([]);
@@ -69,7 +69,7 @@ export default function CompaniesList() {
       </div>
 
       {selectedCompany && (
-        <CompanyModal
+        <FirmaKort
           company={selectedCompany}
           onClose={() => setSelectedCompany(null)}
         />

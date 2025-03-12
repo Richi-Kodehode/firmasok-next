@@ -2,12 +2,12 @@
 
 import React from "react";
 
-export default function CompanyModal({ company, onClose }) {
+export default function FirmaKort({ company, onClose }) {
   if (!company) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-800 p-4">
-      <div className="p-6 -lg shadow-lg max-w-lg w-full sm:w-3/4 md:w-1/2 bg-gray-400">
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-600">
+      <div className="sm:w-3/4 md:w-1/2 max-w-lg w-full  bg-gray-400 p-4">
         <h2 className="text-xl font-bold">{company.navn}</h2>
         <p>Org: {company.organisasjonsnummer}</p>
         <p>Stiftet: {company.stiftelsesdato || "N/A"}</p>
